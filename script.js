@@ -29,31 +29,20 @@ function getComputerchoice(){
 }
 
 function getWinner(p, c){
-    if(p==c){
-        return "draw";
-    }
-    else if(p === 'rock'){
-        if(c === 'paper'){
-            return "computer";
+    switch(true) {
+        case p==c:
+            return "draw";
+        case p=="rock":{
+            if(c=="paper")return "computer";
+            else return "player";
         }
-        else{
-            return "player";
-        }
-    }
-    else if(p === 'paper'){
-        if(c === 'scissors'){
-            return "computer";
-        }
-        else{
-            return "player";
-        }
-    }
-    else{
-        if(c === 'rock'){
-            return "computer";
-        }
-        else{
-            return "player";
+        case p=="paper":{
+            if(c=="scissor")return "computer";
+            else return "player";
+            }
+        case p=="scissor":{
+            if(c=="rock")return "computer";
+            else return "player";
         }
     }
 }
