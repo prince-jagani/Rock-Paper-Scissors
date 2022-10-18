@@ -32,16 +32,16 @@ function getWinner(p, c){
     switch(true) {
         case p==c:
             return "draw";
-        case p=="rock":{
-            if(c=="paper")return "computer";
+        case p==="rock":{
+            if(c==="paper")return "computer";
             else return "player";
         }
-        case p=="paper":{
-            if(c=="scissor")return "computer";
+        case p==="paper":{
+            if(c==="scissor")return "computer";
             else return "player";
             }
-        case p=="scissor":{
-            if(c=="rock")return "computer";
+        case p==="scissor":{
+            if(c==="rock")return "computer";
             else return "player";
         }
     }
