@@ -29,6 +29,7 @@ function getComputerchoice(){
 }
 
 function getWinner(p, c){
+    //  --- USING SWITCH CASE   ---     //
     switch(true) {
         case p==c:
             return "draw";
@@ -45,6 +46,13 @@ function getWinner(p, c){
             else {return "player"};
         }
     }
+    //  ---     USING BOOLEAN EXPRESSION    ---     //
+    /* 
+        if(p==c) return "draw";
+        (p==="rock")?(c==="paper")? return "computer" : return "player";
+        (p==="paper")?(c==="scissors")? return "computer" : return "player";
+        (p==="scissors")?(c==="rock")? return "computer" : return "player";
+    */
 }
 
 function showWinner(winner , computerchoice)
